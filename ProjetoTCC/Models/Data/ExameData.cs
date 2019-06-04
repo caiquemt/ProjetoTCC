@@ -107,7 +107,7 @@ namespace ProjetoTCC.Models.Data
             MySqlConnection msc = new MySqlConnection("server=localhost; uid=root; pwd=123456789; database=bd_clinicare");
             msc.Open();
 
-            MySqlCommand cmd = new MySqlCommand("ALTERAR_EXAME");
+            MySqlCommand cmd = new MySqlCommand("ALTERAR_EXAME", msc);
             cmd.CommandType = CommandType.StoredProcedure;
 
             cmd.Parameters.AddWithValue("@COD_EXAME", exame.COD_EXAME);

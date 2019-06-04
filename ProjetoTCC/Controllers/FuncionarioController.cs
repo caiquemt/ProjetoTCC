@@ -23,7 +23,7 @@ namespace ProjetoTCC.Controllers
             return View(fd.DetalhesFuncionario(id));
         }
 
-        public ActionResult ListaFuncionario(int id)
+        public ActionResult ListaFuncionario()
         {
             Models.Data.FuncionarioData fd = new Models.Data.FuncionarioData();
 
@@ -58,7 +58,7 @@ namespace ProjetoTCC.Controllers
         // POST: Funcionario/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditarFuncionario(int id, Models.Funcionario collection)
+        public ActionResult EditarFuncionario(Models.Funcionario collection)
         {
             Models.Data.FuncionarioData fd = new Models.Data.FuncionarioData();
             fd.EditarFuncionario(collection);
