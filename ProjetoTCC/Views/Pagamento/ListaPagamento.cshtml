@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ProjetoTCC.Models.Pagamento>
+
+@{
+    ViewData["Title"] = "ListaPagamento";
+}
+
+<h2>ListaPagamento</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.COD_PGTO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FORMA_PGTO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TIPO_PGTO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TIPO_CARTAO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QTD_PARCELA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VALOR)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.STATUS_PGTO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OBS_PGTO)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.COD_PGTO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FORMA_PGTO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TIPO_PGTO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TIPO_CARTAO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QTD_PARCELA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VALOR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.STATUS_PGTO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OBS_PGTO)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "EditarPagamento", new { id=item.COD_PGTO }) |
+                @Html.ActionLink("Detalhes", "DetalhesPagamento", new { id = item.COD_PGTO }) |
+                @Html.ActionLink("Deletar", "DeletarPagamento", new { id = item.COD_PGTO })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

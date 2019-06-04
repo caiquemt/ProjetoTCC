@@ -1,0 +1,66 @@
+﻿@model ProjetoTCC.Models.Funcionario
+
+@{
+    ViewData["Title"] = "DetalhesFuncionario";
+}
+
+<h2>DetalhesFuncionario</h2>
+
+<div>
+    <h4>Funcionario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_FUNC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.COD_FUNC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NOME_FUNC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NOME_FUNC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TEL_FUNC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TEL_FUNC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CEL_FUNC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CEL_FUNC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAIL_FUNC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL_FUNC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_CARGO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.COD_CARGO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LOGIN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LOGIN)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SENHA)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SENHA)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Editar", "EditarFuncionario", new { id = Model.COD_FUNC }) |
+    <a asp-action="Index">Voltar para a lista</a>
+</div>

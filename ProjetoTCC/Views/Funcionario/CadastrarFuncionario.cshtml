@@ -1,0 +1,68 @@
+﻿@model ProjetoTCC.Models.Funcionario
+
+@{
+    ViewData["Title"] = "CadastrarFuncionario";
+}
+
+<h2>CadastrarFuncionario</h2>
+
+<h4>Funcionario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CadastrarFuncionario">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="COD_FUNC" class="control-label"></label>
+                <input asp-for="COD_FUNC" class="form-control" />
+                <span asp-validation-for="COD_FUNC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NOME_FUNC" class="control-label"></label>
+                <input asp-for="NOME_FUNC" class="form-control" />
+                <span asp-validation-for="NOME_FUNC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TEL_FUNC" class="control-label"></label>
+                <input asp-for="TEL_FUNC" class="form-control" />
+                <span asp-validation-for="TEL_FUNC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CEL_FUNC" class="control-label"></label>
+                <input asp-for="CEL_FUNC" class="form-control" />
+                <span asp-validation-for="CEL_FUNC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EMAIL_FUNC" class="control-label"></label>
+                <input asp-for="EMAIL_FUNC" class="form-control" />
+                <span asp-validation-for="EMAIL_FUNC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="COD_CARGO" class="control-label"></label>
+                <input asp-for="COD_CARGO" class="form-control" />
+                <span asp-validation-for="COD_CARGO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LOGIN" class="control-label"></label>
+                <input asp-for="LOGIN" class="form-control" />
+                <span asp-validation-for="LOGIN" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SENHA" class="control-label"></label>
+                <input asp-for="SENHA" class="form-control" />
+                <span asp-validation-for="SENHA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para a lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

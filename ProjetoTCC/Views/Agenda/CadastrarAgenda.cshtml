@@ -1,0 +1,63 @@
+﻿@model ProjetoTCC.Models.Agenda
+
+@{
+    ViewData["Title"] = "CadastrarAgenda";
+}
+
+<h2>CadastrarAgenda</h2>
+
+<h4>Agenda</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CadastrarAgenda">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="COD_AGENDA" class="control-label"></label>
+                <input asp-for="COD_AGENDA" class="form-control" />
+                <span asp-validation-for="COD_AGENDA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DIA_CONSULTA" class="control-label"></label>
+                <input asp-for="DIA_CONSULTA" class="form-control" />
+                <span asp-validation-for="DIA_CONSULTA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HORA_CONSULTA" class="control-label"></label>
+                <input asp-for="HORA_CONSULTA" class="form-control" />
+                <span asp-validation-for="HORA_CONSULTA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CONFIRMACAO_AGENDA" class="control-label"></label>
+                <input asp-for="CONFIRMACAO_AGENDA" class="form-control" />
+                <span asp-validation-for="CONFIRMACAO_AGENDA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OBS_AGENDA" class="control-label"></label>
+                <input asp-for="OBS_AGENDA" class="form-control" />
+                <span asp-validation-for="OBS_AGENDA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RESP_AGENDAMENTO" class="control-label"></label>
+                <input asp-for="RESP_AGENDAMENTO" class="form-control" />
+                <span asp-validation-for="RESP_AGENDAMENTO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DATA_RETORNO" class="control-label"></label>
+                <input asp-for="DATA_RETORNO" class="form-control" />
+                <span asp-validation-for="DATA_RETORNO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para a lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

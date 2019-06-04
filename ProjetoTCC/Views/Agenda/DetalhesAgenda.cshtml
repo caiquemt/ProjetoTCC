@@ -1,0 +1,60 @@
+﻿@model ProjetoTCC.Models.Agenda
+
+@{
+    ViewData["Title"] = "DetalhesAgenda";
+}
+
+<h2>DetalhesAgenda</h2>
+
+<div>
+    <h4>Agenda</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_AGENDA)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.COD_AGENDA)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DIA_CONSULTA)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DIA_CONSULTA)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HORA_CONSULTA)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HORA_CONSULTA)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CONFIRMACAO_AGENDA)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CONFIRMACAO_AGENDA)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OBS_AGENDA)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OBS_AGENDA)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RESP_AGENDAMENTO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RESP_AGENDAMENTO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DATA_RETORNO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DATA_RETORNO)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Editar", "EditarAgenda", new { id = Model.COD_AGENDA }) |
+    <a asp-action="Index">Voltar para a lista</a>
+</div>

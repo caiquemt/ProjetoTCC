@@ -1,0 +1,100 @@
+﻿@model IEnumerable<ProjetoTCC.Models.Medico>
+
+@{
+    ViewData["Title"] = "ListaMedico";
+}
+
+<h2>ListaMedico</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.COD_MED)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NOME_MED)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TEL_MED)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CEL_MED)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EMAIL_MED)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CPF_MED)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RG_MED)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CRM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VALIDADE_CRM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SEXO_MED)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.COD_ESPEC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.COD_CARGO)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.COD_MED)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOME_MED)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TEL_MED)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CEL_MED)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMAIL_MED)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF_MED)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RG_MED)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CRM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VALIDADE_CRM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SEXO_MED)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COD_ESPEC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COD_CARGO)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "EditarMedico", new {  id=item.COD_MED  }) |
+                @Html.ActionLink("Detalhes", "DetalhesMedico", new { id=item.COD_MED }) |
+                @Html.ActionLink("Deletar", "DeletarMedico", new { id=item.COD_MED })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

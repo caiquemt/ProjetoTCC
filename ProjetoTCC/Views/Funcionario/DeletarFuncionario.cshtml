@@ -1,0 +1,68 @@
+﻿@model ProjetoTCC.Models.Funcionario
+
+@{
+    ViewData["Title"] = "DeletarFuncionario";
+}
+
+<h2>DeletarFuncionario</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Funcionario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_FUNC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.COD_FUNC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NOME_FUNC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NOME_FUNC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TEL_FUNC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TEL_FUNC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CEL_FUNC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CEL_FUNC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAIL_FUNC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL_FUNC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_CARGO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.COD_CARGO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LOGIN)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LOGIN)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SENHA)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SENHA)
+        </dd>
+    </dl>
+    
+    <form asp-action="DeletarFuncionario">
+        <input type="submit" value="Deletar" class="btn btn-default" /> |
+        <a asp-action="Index">Voltar para a lista</a>
+    </form>
+</div>

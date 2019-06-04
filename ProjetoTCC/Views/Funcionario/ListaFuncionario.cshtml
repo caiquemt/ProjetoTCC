@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ProjetoTCC.Models.Funcionario>
+
+@{
+    ViewData["Title"] = "ListaFuncionario";
+}
+
+<h2>ListaFuncionario</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.COD_FUNC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NOME_FUNC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TEL_FUNC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CEL_FUNC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EMAIL_FUNC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.COD_CARGO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LOGIN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SENHA)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.COD_FUNC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOME_FUNC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TEL_FUNC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CEL_FUNC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EMAIL_FUNC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COD_CARGO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LOGIN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SENHA)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "EditarFuncionario", new { id=item.COD_FUNC }) |
+                @Html.ActionLink("Detalhes", "DetalhesFuncionario", new { id=item.COD_FUNC }) |
+                @Html.ActionLink("Deletar", "DeletarFuncionario", new { id=item.COD_FUNC })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

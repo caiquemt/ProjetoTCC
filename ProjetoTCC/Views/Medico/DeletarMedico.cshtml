@@ -1,0 +1,92 @@
+﻿@model ProjetoTCC.Models.Medico
+
+@{
+    ViewData["Title"] = "DeletarMedico";
+}
+
+<h2>Deletar Medico</h2>
+
+<h3>Você tem certeza disso?</h3>
+<div>
+    <h4>Medico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_MED)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.COD_MED)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NOME_MED)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NOME_MED)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TEL_MED)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TEL_MED)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CEL_MED)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CEL_MED)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAIL_MED)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL_MED)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF_MED)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CPF_MED)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RG_MED)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RG_MED)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CRM)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CRM)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VALIDADE_CRM)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VALIDADE_CRM)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SEXO_MED)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SEXO_MED)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_ESPEC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.COD_ESPEC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_CARGO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.COD_CARGO)
+        </dd>
+    </dl>
+    
+    <form asp-action="DeletarMedico">
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="ListaMedico">Voltar para a lista</a>
+    </form>
+</div>

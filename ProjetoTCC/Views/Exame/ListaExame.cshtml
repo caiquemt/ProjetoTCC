@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ProjetoTCC.Models.Exame>
+
+@{
+    ViewData["Title"] = "ListaExame";
+}
+
+<h2>ListaExame</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.COD_EXAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.COD_PAC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NOME_EXAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DATA_EXAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NOME_LAB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HORA_EXAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.COD_MED)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OBS_EXAME)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.COD_EXAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COD_PAC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOME_EXAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DATA_EXAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOME_LAB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HORA_EXAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COD_MED)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OBS_EXAME)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "EditarExame", new { id=item.COD_EXAME }) |
+                @Html.ActionLink("Detalhes", "DetalhesExame", new { id=item.COD_EXAME }) |
+                @Html.ActionLink("Deletar", "DeletarExame", new { id=item.COD_EXAME })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

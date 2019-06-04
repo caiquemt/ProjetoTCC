@@ -1,0 +1,68 @@
+﻿@model ProjetoTCC.Models.Pagamento
+
+@{
+    ViewData["Title"] = "CadastrarPagamento";
+}
+
+<h2>CadastrarPagamento</h2>
+
+<h4>Pagamento</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CadastrarPagamento">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="COD_PGTO" class="control-label"></label>
+                <input asp-for="COD_PGTO" class="form-control" />
+                <span asp-validation-for="COD_PGTO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FORMA_PGTO" class="control-label"></label>
+                <input asp-for="FORMA_PGTO" class="form-control" />
+                <span asp-validation-for="FORMA_PGTO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TIPO_PGTO" class="control-label"></label>
+                <input asp-for="TIPO_PGTO" class="form-control" />
+                <span asp-validation-for="TIPO_PGTO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TIPO_CARTAO" class="control-label"></label>
+                <input asp-for="TIPO_CARTAO" class="form-control" />
+                <span asp-validation-for="TIPO_CARTAO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="QTD_PARCELA" class="control-label"></label>
+                <input asp-for="QTD_PARCELA" class="form-control" />
+                <span asp-validation-for="QTD_PARCELA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VALOR" class="control-label"></label>
+                <input asp-for="VALOR" class="form-control" />
+                <span asp-validation-for="VALOR" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="STATUS_PGTO" class="control-label"></label>
+                <input asp-for="STATUS_PGTO" class="form-control" />
+                <span asp-validation-for="STATUS_PGTO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OBS_PGTO" class="control-label"></label>
+                <input asp-for="OBS_PGTO" class="form-control" />
+                <span asp-validation-for="OBS_PGTO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para a lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

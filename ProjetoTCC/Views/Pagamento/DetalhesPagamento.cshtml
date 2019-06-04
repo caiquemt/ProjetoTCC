@@ -1,0 +1,66 @@
+﻿@model ProjetoTCC.Models.Pagamento
+
+@{
+    ViewData["Title"] = "DetalhesPagamento";
+}
+
+<h2>DetalhesPagamento</h2>
+
+<div>
+    <h4>Pagamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_PGTO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.COD_PGTO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FORMA_PGTO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FORMA_PGTO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_PGTO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_PGTO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TIPO_CARTAO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TIPO_CARTAO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QTD_PARCELA)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QTD_PARCELA)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.VALOR)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.VALOR)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.STATUS_PGTO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.STATUS_PGTO)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OBS_PGTO)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OBS_PGTO)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Editar", "EditarPagamento", new { id = Model.COD_PGTO }) |
+    <a asp-action="Index">Voltar para a lista</a>
+</div>

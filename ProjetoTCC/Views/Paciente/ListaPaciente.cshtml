@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ProjetoTCC.Models.Paciente>
+
+@{
+    ViewData["Title"] = "ListaPaciente";
+}
+
+<h2>ListaPaciente</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.COD_PAC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NOME_PAC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DATANASC_PAC)
+            </th>
+            <td>
+                @Html.DisplayNameFor(model => model.SEXO_PAC)
+            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.IDADE_PAC)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.COD_PAC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NOME_PAC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DATANASC_PAC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SEXO_PAC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDADE_PAC)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "EditarPaciente", new { id=item.COD_PAC }) |
+                @Html.ActionLink("Detalhes", "DetalhesPaciente", new { id = item.COD_PAC }) |
+                @Html.ActionLink("Deletar", "DeletarPaciente", new { id = item.COD_PAC })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

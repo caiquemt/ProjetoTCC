@@ -1,0 +1,50 @@
+﻿@model ProjetoTCC.Models.Paciente
+
+@{
+    ViewData["Title"] = "DeletarPaciente";
+}
+
+<h2>DeletarPaciente</h2>
+
+<h3>Você tem certeza disso?</h3>
+<div>
+    <h4>Paciente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.COD_PAC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.COD_PAC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NOME_PAC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NOME_PAC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DATANASC_PAC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DATANASC_PAC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SEXO_PAC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SEXO_PAC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IDADE_PAC)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IDADE_PAC)
+        </dd>
+    </dl>
+    
+    <form asp-action="DeletarPaciente">
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
